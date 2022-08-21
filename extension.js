@@ -10,7 +10,8 @@ function activate(context) {
 	let disposable1 = vscode.commands.registerTextEditorCommand('improviz.runInImproviz', editor => {
     // to do: 
     // - get host and port from settings
-    // - set up keyboard shortcuts (send entire buffer)
+    // - set up keyboard shortcuts 
+    // x send actual editor buffer
     // x add special command for interface control (/toggle/text)
     // x only work for .pz extension
 

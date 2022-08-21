@@ -21,8 +21,13 @@
     },{
       "command": "improviz.toggleText",
       "title": "Toggle Improviz Text"
-    }
-  ]
+    }],
+    "keybindings": [
+      {
+          "command": "improviz.runInImproviz",
+          "key": "ctrl+enter",
+          "mac": "cmd+enter"
+      }]
   },
   "scripts": {
     "lint": "eslint .",
