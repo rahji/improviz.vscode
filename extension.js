@@ -7,13 +7,9 @@ const axios = require('axios');
  */
 function activate(context) {
 
+  const url = vscode.workspace.getConfiguration().get('improviz.url');
+
 	let disposable1 = vscode.commands.registerTextEditorCommand('improviz.runInImproviz', editor => {
-    // to do: 
-    // - get host and port from settings
-    // - set up keyboard shortcuts 
-    // x send actual editor buffer
-    // x add special command for interface control (/toggle/text)
-    // x only work for .pz extension
 
     // maybe a hack since I couldn't figure out if/how I could add an "improviz" language to vscode
     if (editor.document.fileName.split('.').pop() !== 'pz') {
@@ -21,7 +17,7 @@ function activate(context) {
     }
 
     const data = editor.document.getText();
-    axios.post('http://localhost:3000/read', data)
+    axios.post(`${url}/read`, data)
       .then((res) => {
         console.log(`/read Status: ${res.status}`);
       }).catch((err) => {
@@ -36,7 +32,7 @@ function activate(context) {
       return
     }
 
-    axios.post('http://localhost:3000/toggle/text')
+    axios.post(`${url}/toggle/text`)
       .then((res) => {
         console.log(`/toggle/text Status: ${res.status}`);
       }).catch((err) => {
