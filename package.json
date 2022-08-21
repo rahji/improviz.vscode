@@ -15,13 +15,16 @@
   ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "improviz.runInImproviz",
-      "title": "Run in Improviz"
-    },{
-      "command": "improviz.toggleText",
-      "title": "Toggle Improviz Text"
-    }],
+    "commands": [
+      {
+        "command": "improviz.runInImproviz",
+        "title": "Run in Improviz"
+      },
+      {
+        "command": "improviz.toggleText",
+        "title": "Toggle Improviz Text"
+      }
+    ],
     "configuration": {
       "title": "Improviz",
       "properties": {
@@ -34,10 +37,11 @@
     },
     "keybindings": [
       {
-          "command": "improviz.runInImproviz",
-          "key": "ctrl+enter",
-          "mac": "cmd+enter"
-      }]
+        "command": "improviz.runInImproviz",
+        "key": "ctrl+enter",
+        "mac": "cmd+enter"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -45,14 +49,17 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.70.0",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.70.0",
+    "@vscode/test-electron": "^2.1.5",
     "eslint": "^8.20.0",
     "glob": "^8.0.3",
     "mocha": "^10.0.0",
-    "typescript": "^4.7.4",
-    "@vscode/test-electron": "^2.1.5"
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
   }
 }
