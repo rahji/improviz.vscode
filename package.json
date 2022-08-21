@@ -1,7 +1,12 @@
 {
   "name": "improviz",
   "displayName": "Improviz",
+  "publisher": "RobDuarte",
   "description": "Allows interacting with Improviz by sending it code to run",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahji/improviz.vscode"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.70.0"
