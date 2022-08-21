@@ -9,11 +9,6 @@
   "categories": [
     "Other"
   ],
-  "languages": [{
-    "id": "improviz",
-    "extensions": [ ".pz" ],
-    "aliases": [ "Improviz", "improviz" ]
-  }],
   "activationEvents": [
     "onCommand:improviz.runInImproviz",
     "onCommand:improviz.toggleText"
