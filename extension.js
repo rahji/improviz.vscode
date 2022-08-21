@@ -19,7 +19,7 @@ function activate(context) {
       return
     }
 
-    const data = "cube()";
+    const data = editor.document.getText();
     axios.post('http://localhost:3000/read', data)
       .then((res) => {
         console.log(`/read Status: ${res.status}`);
